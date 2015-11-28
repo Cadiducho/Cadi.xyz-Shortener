@@ -1,4 +1,15 @@
 <?php
+
+/*
+ * The MIT License
+ *
+ * Copyright 2015 Cadiducho.
+ * Read more in https://github.com/Cadiducho/Shortener/blob/master/LICENSE
+ */
+
+require './shortener.php';
+require './config.php';
+
 $links = json_decode(file_get_contents('links.json'), true);
 $solicitada = str_replace('/', '', $_SERVER['REQUEST_URI']);
 if(array_key_exists($solicitada, $links)){
